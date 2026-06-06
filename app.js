@@ -10,7 +10,8 @@ function lahetaTilaus() {
 
     // 2. TEHDÄÄN FETCH-PYYNTÖ RENDER-PALVELIMELLE
     // Huom: vaihdetaan tähän myöhemmin sinun oma Render-osoitteesi
-    fetch('/luo-maksu-istunto', {
+    fetch('https://onrender.com', {
+        
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
