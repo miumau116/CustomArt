@@ -31,7 +31,42 @@
 
         <button onclick="lahetaTilaus()">Siirry maksamaan</button>
     </div>
+<!-- 🍔 HAMPURILAISVALIKKO -->
+<div class="menu-toggle" onclick="toggleMenu()" style="cursor:pointer; padding:10px;">☰ Valikko</div>
+<nav id="mobileMenu" style="display:none; background:#eee; padding:10px;">
+  <button onclick="naytaOsio('verkkokauppa')">🎨 Kauppa</button>
+  <button onclick="naytaOsio('ostoskori')">🛒 Ostoskori (<span id="ostoskoriMaara">0</span>)</button>
+  <button onclick="naytaOsio('kassa')">💳 Kassa</button>
+</nav>
 
+<!-- 🎨 VERKKOKAUPPA SIVU -->
+<div id="verkkokauppa" style="display:none; padding:10px;">
+  <h2>Verkkokauppa</h2>
+  <button onclick="lisaaOstoskoriin('Piirretty piirustus', 20.00)">🎨 Osta Piirustus (20€)</button>
+  <button onclick="lisaaOstoskoriin('Mystery Box', 35.00)">📦 Osta Mystery Box (35€)</button>
+  <button onclick="lisaaOstoskoriin('Jewelry', 15.00)">💎 Osta Koru (15€)</button>
+</div>
+
+<!-- 🛒 OSTOSKORI SIVU -->
+<div id="ostoskori" style="display:none; padding:10px;">
+  <h2>Ostoskori</h2>
+  <p>💡 Tuplaklikkaa tuotetta poistaaksesi sen.</p>
+  <ul id="ostoskoriLista"></ul>
+  <p>Yhteensä: <span id="loppuSumma">0.00</span>€</p>
+</div>
+
+<!-- 💳 KASSA SIVU -->
+<div id="kassa" style="display:none; padding:10px;">
+  <h2>Kassa</h2>
+  <input type="text" id="koodiSyote" placeholder="Alennuskoodi">
+  <button onclick="tarkistaKoodi()">Käytä koodi</button>
+  <br><br>
+  <input type="text" id="osoiteKentta" placeholder="Katuosoite">
+  <input type="text" id="postinumeroKentta" placeholder="Postinumero">
+  <button onclick="yritaOstaa()">Vahvista tilaus</button>
+  <p id="kassaViesti"></p>
+</div>
+    
     <!-- Tämä yhdistää div-napin siihen sinun fetch-koodiin -->
     <script src="app.js"></script>
 </body>
