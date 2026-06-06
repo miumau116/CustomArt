@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 // Näytetään index.html automaattisesti, kun joku menee sivustolle
-app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, '')));
 
 // Express kuuntelee fetch-pyyntöä tässä osoitteessa
 app.post('/luo-maksu-istunto', async (req, res) => {
