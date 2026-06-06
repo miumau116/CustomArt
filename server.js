@@ -8,10 +8,9 @@ const stripe = require('stripe')('sk_test_51Pabcdefghijklmnopqrstuvwxyz123456789
 app.use(express.json());
 app.use(cors());
 
-app.use(express.static(__dirname));
-
+// TÄMÄ PAKOTTAA PALVELIMEN LÖYTÄMÄÄN INDEX-TIEDOSTON SUORAAN NYKYISESTÄ KANSIOSTA
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 app.post('/luo-maksu-istunto', async (req, res) => {
