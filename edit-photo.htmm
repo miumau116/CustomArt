@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Custom Painting Request</title>
+</head>
+<body>
+
+<h1>Request a Custom Painting</h1>
+
+<input type="file">
+
+<br><br>
+
+<textarea rows="10" cols="50"
+placeholder="Describe your painting idea">
+</textarea>
+
+<br><br>
+
+<button>Submit Request</button>
+
+</body>
+</html>
