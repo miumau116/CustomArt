@@ -1,0 +1,24 @@
+body{
+    font-family: Arial;
+    text-align:center;
+}
+
+#menu{
+    display:none;
+    background:#eee;
+    padding:10px;
+}
+
+#menu a{
+    display:block;
+    margin:10px;
+}
+
+#couponPopup{
+    display:none;
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:gold;
+    padding:20px;
+}
